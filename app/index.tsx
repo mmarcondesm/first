@@ -35,6 +35,7 @@ const list = [
 ]
 
 export default function Index() {
+    
   return (
     <View style={styles.container}>
       <Header name="Matheus Marcondes"/>
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fafafa'
   },
-  title:{
+  title:{   
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 14,

@@ -4,22 +4,24 @@ import React, { useState } from 'react';
 
 
 
-export default function Moviments({data}) {
+export default function Moviments({ data }) {
     const [showValue, setShowValue] = useState(false);
     
     return(
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={() => setShowValue(!showValue)}>
                 <Text style={styles.date}>{data.date}</Text>
             
             <View style={styles.content}>
                 <Text style={styles.label}>{data.label}</Text>
 
                 { showValue ? (
-                    <Text style={datatype === 1 ? styles.value : styles.expenses}>
+                    
+                    <Text style={data.type === 1 ? styles.value : styles.expenses}>
                         {data.type === 1 ? `R$ ${data.value}` : `R$ -${data.value}`}
                         </Text>
                         ) : (
                             <View style={styles.skeleton}>
+
                             </View>
                         )}
                     
@@ -48,13 +50,28 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     label:{
-
+        justifyContent: 'space-between',
+        fontWeight: 'bold',
+        fontSize: 16
     },
     date:{
 
     },
     value:{
-
+        fontSize: 16,
+        color: '#2ecc71',
+        fontWeight: 'bold'
+    },
+    expenses:{
+        fontSize: 16,
+        color: '#e74c3c',
+        fontWeight: 'bold',
+    },
+    skeleton:{
+        marginTop: 6,
+        width: 80,
+        height: 6,
+        backgroundColor: '#DADADA',
+        borderRadius: 8,
     }
-
 })
