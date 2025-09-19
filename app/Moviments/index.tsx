@@ -27,9 +27,6 @@ export default function Moviments({ data }) {
                     
                 
 
-                <Text style={styles.value}>
-                    {data.value}
-                </Text>
             </View>
 
         </TouchableOpacity>
@@ -47,21 +44,25 @@ const styles = StyleSheet.create({
         borderBottomColor: '#DADADA'
     },
     content:{
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 2,
+        marginBottom: 8
     },
     label:{
-        justifyContent: 'space-between',
         fontWeight: 'bold',
         fontSize: 16
     },
     date:{
 
     },
+    
     value:{
         fontSize: 16,
         color: '#2ecc71',
         fontWeight: 'bold'
     },
+
     expenses:{
         fontSize: 16,
         color: '#e74c3c',

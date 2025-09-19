@@ -7,7 +7,7 @@ const list = [
   {
     id: 1,
     label: 'Conta de Luz',
-    Value: '300,00',
+    value: '300,00',
     date: '17/09/2022',
     type: 0
   },
@@ -28,7 +28,7 @@ const list = [
   {
     id: 4,
     label: 'Conta de Água',
-    Value: '300,00',
+    value: '300,00',
     date: '17/09/2022',
     type: 0
   }
